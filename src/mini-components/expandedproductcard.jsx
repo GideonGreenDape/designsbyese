@@ -36,7 +36,7 @@ function ExpandedProduct({keyword}) {
 
 function AddtoCart({value}) {
     return(
-        <div className="flex flex-col items-center justify-center bg-buttondark cursor-pointer w-[210px]  h-[40px] hover:border-[.9px] hover:border-gray">
+        <div className="flex flex-col items-center justify-center bg-buttondark cursor-pointer w-[180px] min-330:w-[210px]  h-[40px] hover:border-[.9px] hover:border-gray">
             <p className="font-montserrat text-[13px] text-white font-extrabold w-[95px] h-[16px]">{value}</p>
         </div>
     )

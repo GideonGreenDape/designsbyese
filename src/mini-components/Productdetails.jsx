@@ -147,7 +147,7 @@ function ProductDetails() {
                   className={
                     list.name == "StylingOccasions:" && toggle
                       ? "hidden"
-                      : "list-disc w-[350px] list-outside min-200:w-[200px] min-300:w-[270px] min-390:w-[320px] min-500:w-[390px]  min-900:w-[470px] font-montserrat text-[13px] font-regular"
+                      : "list-disc w-[350px] list-outside min-200:w-[200px] min-300:w-[295px] min-390:w-[320px] min-500:w-[390px]  min-900:w-[470px] font-montserrat text-[13px] font-regular"
                   }
                 >
                   <span className=" font-montserrat  text-[15] font-semibold">

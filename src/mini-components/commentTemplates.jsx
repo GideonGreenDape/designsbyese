@@ -53,7 +53,7 @@ function Comments() {
             return (
               <li
                 id={item.id}
-                className="min-1024:gap-[5px] min-1024:bg-zinc-50 min-1024:px-[5px] min-1024:py-[7px] min-1024:w-[322px] scroll-snap-align-start w-[270px] min-330:w-[311px]  min-400:w-[340px] min-500:w-[450px] min-680:w-[311px]  mb-[15px] flex flex-col gap-[3px]"
+                className="min-1024:gap-[5px] min-1024:bg-zinc-50 min-1024:px-[5px] min-1024:py-[7px] min-1024:w-[322px] scroll-snap-align-start w-[270px] min-330:w-[311px]  min-400:w-[340px] min-500:w-[450px] min-680:w-[311px]  mb-[15px] flex flex-col gap-[9px]"
               >
                 <UsernameAndProfile username={item.username} />
                 <UserComments comments={item.comment} />
@@ -75,7 +75,7 @@ function UsernameAndProfile({ username }) {
   return (
     <div className="w-[230px] h-[28.55px] flex flex-row gap-[7px] item-start">
       <img
-        className="w-[30px] h-[28.55px]"
+        className="w-[24px] h-[24px]"
         src={profileIcon}
         alt="user profile icon"
       />
@@ -96,7 +96,7 @@ function UserComments({ comments }) {
 
 function UserRatingsAndDate({ date, ratings }) {
   return (
-    <div className="self-end w-[190px] h-[14px] flex flex-row gap-[16px]">
+    <div className="self-center min-500:self-end w-[190px] h-[14px] flex flex-row gap-[16px]">
       <p className="w-[90px] h-[14px] font-FuturastdBook font-light text-[12px] text-gray ">
         {date}
       </p>

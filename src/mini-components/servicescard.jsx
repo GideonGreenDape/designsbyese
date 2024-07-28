@@ -22,7 +22,7 @@ function Company() {
     },
   ];
   return (
-    <div className="flex flex-col gap-[29px] w-[121px]">
+    <div className="flex flex-col gap-[15px] min-500:gap-[29px] w-[121px]">
       <div className="flex flex-col gap-[10px]">
         <p className="font-opensans w-[84px] font-extrabold text-[11px] text-gray">
           COMPANY
@@ -30,13 +30,13 @@ function Company() {
         <hr className="w-[50.01px] border-t-[2.8px] border-gray" />
       </div>
 
-      <ul className="flex flex-col gap-[15px]">
+      <ul className="flex flex-col gap-[8px] min-500:gap-[15px]">
         {company.map((items) => {
           return (
             <li id={items.id}>
               <a
                 href="#"
-                className="font-opensans text-[13px] font-bold text-gray hover:font-extrabold"
+                className="font-opensans text-[12px] min-350:text-[13px] font-bold text-gray hover:font-extrabold"
               >
                 {items.linkname}
               </a>
@@ -73,20 +73,20 @@ function UsefulLink() {
   ];
 
   return (
-    <div className="flex flex-col gap-[29px] w-[106px] min-500:w-[120px]">
+    <div className="flex flex-col gap-[15px] min-500:gap-[29px] w-[106px] min-500:w-[120px]">
       <div className="flex flex-col gap-[10px]">
         <p className="font-opensans w-[84px] font-extrabold text-[11px] text-gray">
           USEFUL LINK
         </p>
         <hr className="w-[50.01px] border-t-[2.8px] border-gray" />
       </div>
-      <ul className="flex flex-col gap-[15px] w-[106px] min-500:w-[120px]">
+      <ul className="flex flex-col gap-[8px] min-500:gap-[15px] w-[106px] min-500:w-[120px]">
         {useLinks.map((items) => {
           return (
             <li id={items.id}>
               <a
                 href="#"
-                className="font-opensans text-[13px] font-bold text-gray hover:font-extrabold"
+                className="font-opensans text-[12px] min-350:text-[13px] font-bold text-gray hover:font-extrabold"
               >
                 {items.linkname}
               </a>
@@ -115,27 +115,27 @@ function Contactinfo() {
   ];
 
   return (
-    <div className="flex flex-col gap-[29px] min-400:gap-[29px] w-[265px] ">
+    <div className="flex flex-col gap-[15px] min-500:gap-[29px] min-400:gap-[29px] w-[265px] ">
       <div className="flex flex-col gap-[10px]">
         <p className="font-opensans w-[84px] font-extrabold text-[11px] text-gray">
           CONTACT INFO
         </p>
         <hr className="w-[50.01px] border-t-[2.8px] border-gray" />
       </div>
-      <ul className="flex flex-col gap-[15px] min-500:w-[200px] w-[145px] text-wrap">
+      <ul className="flex flex-col gap-[8px] min-500:gap-[15px] min-500:w-[200px] w-[145px] text-wrap">
         {contactinfo.map((item) => {
           return (
             <li
               id={item.id}
               className={
                 item.linkname == "6,Rutero street Jeddo,  Delta State"
-                  ? "w-[145px] min-430:w-[177px] min-500:w-[200px] leading-tight text-wrap"
+                  ? "w-[195px] min-430:w-[177px] min-500:w-[200px] leading-tight text-wrap"
                   : "w-[145px] min-430:w-[177px] min-500:w-[200px] text-wrap"
               }
             >
               <a
                 href="#"
-                className="w-[105px] min-400:w-[147px] block font-opensans text-[13px] font-bold text-gray hover:font-extrabold"
+                className="w-[165px] min-400:w-[147px] block font-opensans  text-[12px] min-350:text-[13px] font-bold text-gray hover:font-extrabold"
               >
                 {item.linkname}
               </a>
