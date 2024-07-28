@@ -31,7 +31,7 @@ function BuyProduct() {
        </div>
        </section>
       <section className="mt-[70px] mb-[280px] flex flex-col gap-[35px] items-start ml-[7%]  min-1200:items-center">
-        <p className=" font-montserrat font-semibold text-gray min-300:text-[18px] text-[22px]">
+        <p className="font-montserrat font-semibold text-gray min-300:text-[18px] text-[22px]">
           Loving this look? Shop similar pieces now!
         </p>
         <div className="flex flex-row gap-[6px] min-330:gap-[11px] min-400:gap-[35px] min-418px:gap-[16px] w-[297px] min-330:w-[320px] min-400:w-[370px] min-450:gap-[10px] min-450:w-[400px] min-600:gap-[10px] min-1000:gap-[75px] flex-wrap min-540:w-[540px] min-700:w-[600px] min-820:w-[600px] min-1000:w-[850px] min-1200:w-[900px] ">
