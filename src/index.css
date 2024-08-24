@@ -6,6 +6,26 @@
 body{
  position: relative;
  padding-top: 0px;
- background-color: #FBFBFB;
+ /* background-color: #FBFBFB; */
+}
+
+input {
+    background-color: white !important; /* Set background to white */
+}
+
+
+input:-webkit-autofill {
+    -webkit-appearance: none;
+    appearance: none;
+    background-image: none !important;
+    background-color: white !important; /* Keep background white */
+}
+
+input:-webkit-autofill:focus {
+    background-color: white !important; /* Keep background white when focused */
+}
+
+input:-webkit-autofill:hover {
+    background-color: white !important; /* Keep background white when hovered */
 }
 

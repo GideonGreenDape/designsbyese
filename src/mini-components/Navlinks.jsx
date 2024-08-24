@@ -11,14 +11,10 @@ const linkItems = [
     link: '/ready_to_wear'
   },
   { id:3,
-    name:"Kiddies",
-    link: '/kiddies'
-  },
-  { id:4,
     name:"Bespoke",
     link: '/bespoke'
   },
-  { id:5,
+  { id:4,
     name:"Measurement Guides",
     link: '/measurement_guides'
   },
@@ -31,7 +27,7 @@ function NavLinks() {
         {linkItems.map((items) => {
           return (
             <Link to={items.link} key={items.id} >
-              <li className="font-montserrat no-underline text-[13px] hover:font-black hover:underline min-[1231px]:text-[12px] text-buttondark font-bold">
+              <li className="font-montserrat no-underline text-[13px] hover:font-black min-[1231px]:text-[12px] text-white font-bold">
                 {items.name}
               </li>
             </Link>

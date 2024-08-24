@@ -15,8 +15,8 @@ function LogoReversed(){
     return(
         <Link to="/" >
         <div className="hidden min-1024:flex flex-row items-center gap-[18px] ">
-            <img src={Designsbyeselogo} className="w-[25px] h-[25px]" alt="design by ese brand logo" />
-            <p className="font-Peralta text-buttondark">DesignsbyEse</p>
+            {/* <img src={Designsbyeselogo} className="w-[25px] h-[25px]" alt="design by ese brand logo" /> */}
+            <p className="font-Peralta text-white">DesignsbyEse</p>
         </div>
         </Link>
     )

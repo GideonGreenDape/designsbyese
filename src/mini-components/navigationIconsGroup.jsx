@@ -1,7 +1,7 @@
 import cartoutline from "../Assets/Icons/cartoutline.png";
 import ProfileIcon from "./profileIcon";
 import menuicon from "../Assets/Icons/menuicon.svg";
-import searchIcon from "../Assets/Icons/searchIcon.png";
+import searchIcon from "../Assets/Icons/search.png";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import {getSwitchState}  from "../Reducer/menuSlice";

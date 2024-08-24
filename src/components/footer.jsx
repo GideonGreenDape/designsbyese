@@ -4,7 +4,7 @@ import bottomFooter from "../mini-components/copyright";
 function Footer() {
     return(
         <>
-         <footer className="pl-[9%] min-1200:pl-[4%] pr-[2%] flex flex-col items-center mt-[80px] pt-[65px] pb-[55px] border-solid border-gray border-t-[1px] border-b-[1px]">
+         <footer className="bg-white pl-[9%] min-1200:pl-[4%] pr-[2%] flex flex-col items-center mt-[80px] pt-[65px] pb-[55px] border-solid border-gray  border-b-[1px]">
         <div className="flex flex-row pl-[1%] justify-between flex-wrap min-700:gap-[30px] gap-y-[35px]  min-1200:gap-[132px] gap-x-[10px]  ">
           <footerlinks.UsefulLink />
           <footerlinks.Company />

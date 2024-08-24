@@ -24,10 +24,10 @@ function Company() {
   return (
     <div className="flex flex-col gap-[15px] min-500:gap-[29px] w-[121px]">
       <div className="flex flex-col gap-[10px]">
-        <p className="font-opensans w-[84px] font-extrabold text-[11px] text-gray">
+        <p className="font-opensans w-[84px] font-extrabold text-[11px] text-buttondark">
           COMPANY
         </p>
-        <hr className="w-[50.01px] border-t-[2.8px] border-gray" />
+        <hr className="w-[50.01px] border-t-[2.8px] border-buttondark" />
       </div>
 
       <ul className="flex flex-col gap-[8px] min-500:gap-[15px]">
@@ -36,7 +36,7 @@ function Company() {
             <li id={items.id}>
               <a
                 href="#"
-                className="font-opensans text-[12px] min-350:text-[13px] font-bold text-gray hover:font-extrabold"
+                className="font-opensans text-[12px] min-350:text-[13px] font-thin text-gray hover:font-extrabold"
               >
                 {items.linkname}
               </a>
@@ -75,10 +75,10 @@ function UsefulLink() {
   return (
     <div className="flex flex-col gap-[15px] min-500:gap-[29px] w-[106px] min-500:w-[120px]">
       <div className="flex flex-col gap-[10px]">
-        <p className="font-opensans w-[84px] font-extrabold text-[11px] text-gray">
+        <p className="font-opensans w-[84px] font-extrabold text-[11px] text-buttondark">
           USEFUL LINK
         </p>
-        <hr className="w-[50.01px] border-t-[2.8px] border-gray" />
+        <hr className="w-[50.01px] border-t-[2.8px] border-buttondark" />
       </div>
       <ul className="flex flex-col gap-[8px] min-500:gap-[15px] w-[106px] min-500:w-[120px]">
         {useLinks.map((items) => {
@@ -86,7 +86,7 @@ function UsefulLink() {
             <li id={items.id}>
               <a
                 href="#"
-                className="font-opensans text-[12px] min-350:text-[13px] font-bold text-gray hover:font-extrabold"
+                className="font-opensans text-[12px] min-350:text-[13px] font-thin text-gray hover:font-extrabold"
               >
                 {items.linkname}
               </a>
@@ -117,10 +117,10 @@ function Contactinfo() {
   return (
     <div className="flex flex-col gap-[15px] min-500:gap-[29px] min-400:gap-[29px] w-[265px] ">
       <div className="flex flex-col gap-[10px]">
-        <p className="font-opensans w-[84px] font-extrabold text-[11px] text-gray">
+        <p className="font-opensans w-[84px] font-extrabold text-[11px] text-buttondark">
           CONTACT INFO
         </p>
-        <hr className="w-[50.01px] border-t-[2.8px] border-gray" />
+        <hr className="w-[50.01px] border-t-[2.8px] border-buttondark" />
       </div>
       <ul className="flex flex-col gap-[8px] min-500:gap-[15px] min-500:w-[200px] w-[145px] text-wrap">
         {contactinfo.map((item) => {
@@ -135,7 +135,7 @@ function Contactinfo() {
             >
               <a
                 href="#"
-                className="w-[165px] min-400:w-[147px] block font-opensans  text-[12px] min-350:text-[13px] font-bold text-gray hover:font-extrabold"
+                className="w-[165px] min-400:w-[147px] block font-opensans  text-[12px] min-350:text-[13px] font-thin text-gray hover:font-extrabold"
               >
                 {item.linkname}
               </a>
@@ -151,10 +151,10 @@ function Instagram() {
   return (
     <div className="flex flex-col gap-[29px] ">
       <div className="flex flex-col gap-[10px]">
-        <p className="font-opensans w-[84px] font-extrabold text-[11px] text-gray">
+        <p className="font-opensans w-[84px] font-extrabold text-[11px] text-buttondark">
           INSTAGRAM
         </p>
-        <hr className="w-[50.01px] border-t-[2.8px] border-gray" />
+        <hr className="w-[50.01px] border-t-[2.8px] border-buttondark" />
       </div>
 
       <div className="flex flex-row gap-[17px]">

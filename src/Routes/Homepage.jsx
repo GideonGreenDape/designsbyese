@@ -10,6 +10,7 @@ import HeaderLayout from "../mini-components/HomeLayout";
 import Footer from "../components/footer";
 import { useSelector } from "react-redux";
 import MenuCard from "../mini-components/menu";
+import newimage from "../Assets/images/newimage.png"
 
 let ThisweekProduct = [
   {
@@ -28,15 +29,16 @@ export default function HomePage() {
     <>
       <Header />
       {menuState? <MenuCard />:<></> }
-      <section className="ml-[-3%] flex flex-col pt-[30px] items-center bg-herobackground min-1000:h-[540px] bg-white-300 h-[500px]  max-w-full mt-[50px]  ">
-        <HeaderLayout />
+      <section className="max-w-full mt-[45px] bg-newimage h-[650px] ">
+        {/* <HeaderLayout /> */}
+        {/* <img src={image} className="min-w-full h-[600px]" ></img> */}
       </section>
-      <section className=" shadow-md hidden max-w-full h-[90px] min-1200:flex flex-row justify-around items-start pt-[20px]">
+      {/* <section className="bg-white shadow-md hidden max-w-full h-[90px] min-1200:flex flex-row justify-around items-start pt-[20px]">
         <Quickfeature.Brandfeature />
         <Quickfeature.Tagfeature />
         <Quickfeature.PaymentMethods />
         <Quickfeature.ShippingFeature />
-      </section>
+      </section> */}
       <section className="flex flex-col items-center pt-[65px] min-w-fit">
         <div className="ml-[5px] flex flex-col gap-[49px] items-start ">
           <p className="font-montserrat font-bold text-[21px] w-[250px] min-400:w-[340px] min-540:w-[450px] min-820:max-w-full min-700:w-[500px] ">

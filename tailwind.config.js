@@ -81,13 +81,25 @@ export default {
         button:"#009FE4",
         buttondark:"#006B99",
         light:"#FBFBFB",
-        link: "#64506C"
+        link: "#64506C",
+        bootstrapblue: "#1A73EB",
+        paleyellow: "#fff3cd",
+        infoblue:"#d1ecf1",
+        softred:"#F1948A",
+        pink: "#5F8896",
+        cartonyellow:"#FFEED8",
+        tealgreen:"#5E736A",
+        milkgray:"#F8F8F8",
       },
       backgroundImage: {
         menugradient: 'linear-gradient(to bottom, #D8C58F 0%, #ffffff 100%)',
         LargeBrandlogo: "url('src/Assets/Icons/LargeBrandicon.svg')",
         headerbackground: "url('src/Assets/Icons/headerbackground.svg')",
         herobackground:"url('src/Assets/images/herobackground.svg')",
+        homepageimage:"url('src/Assets/images/image.png')",
+        loginimage:"url('src/Assets/images/login.jpg')",
+        newimage:"url('src/Assets/images/newimage.png')",
+
       },
       zIndex:{
         '0':'0',

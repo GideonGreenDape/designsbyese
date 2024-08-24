@@ -10,12 +10,24 @@ function Header() {
   const [State, setState] = useState(false);
   const [width, setWidth] = useState(window.innerWidth);
   const [Midstate, setMidstate] = useState(false);
+  const [data, setdata]= useState(false);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const handleResize = () => setWidth(window.innerWidth);
 
     window.addEventListener("resize", handleResize);
+    const fetchData = async () => {
+      try {
+        const response = await fetch('http://localhost:3000/loginchecker'); // Replace with your API URL
+        const result = await response.json();
+        setdata(result);
+      } catch (error) {
+        setError('Error fetching data');
+      }
+    };
 
+    fetchData();
     // Cleanup event listener on component unmount
     return () => {
       window.removeEventListener("resize", handleResize);
@@ -32,7 +44,7 @@ function Header() {
     }
   }
   return (
-    <header className="bg-white h-[50px] pt-[6px] pb-[4px] z-100 fixed top-0 left-0 right-0 flex flex-row justify-between border-b-[1px] border-lightgray items-center px-[6%] min-350:px-[2%]  ">
+    <header className="bg-pink h-[50px] pt-[6px] pb-[4px] z-100 fixed top-0 left-0 right-0 flex flex-row justify-between  items-center px-[6%] min-350:px-[25px]  ">
       <div className="min-450:hidden">
         <img className="h-[24px] w-[24px] " src={brandlogo} alt="brandLogo" />
       </div>

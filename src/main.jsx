@@ -22,6 +22,7 @@ import CartPage from './Routes/cartPage.jsx';
 import DetailsPage from './Routes/DetailsPage.jsx';
 import ShippingPage from './Routes/shippingPage.jsx';
 import OrderHistory from './Routes/orderHistory.jsx';
+import SignUpPage from './Routes/signup.jsx';
 
 const router= createBrowserRouter(
   [
@@ -93,6 +94,11 @@ const router= createBrowserRouter(
     {
       path: "/order_history",
       element: <OrderHistory />,
+      errorElement: <ErrorPage />
+    },
+    {
+      path: "/signup",
+      element: <SignUpPage />,
       errorElement: <ErrorPage />
     },
   ]

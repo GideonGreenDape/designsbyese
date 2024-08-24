@@ -63,7 +63,7 @@ function NameInput({ textname, name, width }) {
 
 function Username({ textname, name, width }) {
   let classStyleOne =
-    " border-solid rounded bg-white border-buttongray pl-[16px] pb-[4px] drop-shadow-md hover:border-[1px] hover:border-gray border-[1px] focus:drop-shadow-md focus:outline-blue-500 font-montserrat font-medium text-[14px] " +
+    "bg-white border-solid rounded border-buttongray pl-[16px] pb-[4px] drop-shadow-md hover:border-[1px] hover:border-gray border-[1px] focus:drop-shadow-md focus:outline-blue-500 font-montserrat font-medium text-[14px] " +
     width;
   let classStyleTwo =
     " border-solid rounded focus:outline-blue-500 border-rose-500 border-[1px] pl-[16px] pb-[4px] drop-shadow-md  font-montserrat font-medium text-[14px] " +
@@ -106,12 +106,12 @@ function Username({ textname, name, width }) {
   );
 }
 
-function EmailInput({ textname, name, width }) {
+function EmailInput({ textname, name, width, handleInput }) {
   let classStyleOne =
-    " border-solid rounded border-buttongray pl-[16px] pb-[4px] drop-shadow-md hover:border-[1px] hover:border-gray border-[1px] focus:drop-shadow-md focus:outline-blue-500 font-montserrat font-medium text-[14px] " +
+    "input-autofill-white bg-white-200 focus:bg-white border-solid rounded border-buttongray pl-[16px] pb-[4px] drop-shadow-md hover:border-[1px] hover:border-gray border-[1px] focus:drop-shadow-md focus:outline-blue-500 font-montserrat font-medium text-[14px] " +
     width;
   let classStyleTwo =
-    " border-solid rounded focus:outline-blue-500 border-rose-500 border-[1px] pl-[16px] pb-[4px] drop-shadow-md  font-montserrat font-medium text-[14px] " +
+    "input-autofill-white focus:bg-white border-solid rounded focus:outline-blue-500 border-rose-500 border-[1px] pl-[16px] pb-[4px] drop-shadow-md  font-montserrat font-medium text-[14px] " +
     width;
   const [errorState, seterrorState] = useState(false);
   return (
@@ -120,7 +120,7 @@ function EmailInput({ textname, name, width }) {
         {textname}
       </p>
       {errorState ? (
-        <p className="text-[11px] font-montserrat font-medium text-rose-500">
+        <p className="text-[11px] font-montserrat font-medium text-softred">
           * Email address is not valid
         </p>
       ) : (
@@ -130,18 +130,26 @@ function EmailInput({ textname, name, width }) {
         className={errorState ? classStyleTwo : classStyleOne}
         onChange={(e) => {
           let entry = e.target.value;
-          let regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          let regex =
+            /^[a-zA-Z][a-zA-Z0-9]*(?:\.[a-zA-Z0-9]+)*@[a-zA-Z0-9]+\.[a-zA-Z]{2,}$/;
           let emailtest = regex.test(entry);
           if (emailtest) {
             seterrorState(false);
-            console.log(errorState);
           } else if (!emailtest) {
             seterrorState(true);
           }
         }}
+        onBlur={(e) => {
+          let userInput = e.target.value;
+          handleInput(userInput);
+        }}
         type="text"
         name={name}
-        id=""
+        id={name}
+        placeholder=" "
+        style={{
+          backgroundColor: "white",
+        }}
       />
     </div>
   );
@@ -161,7 +169,7 @@ function Date({ textname, name, width }) {
   );
 }
 
-function Password({ textname, name, width }) {
+function Password({ textname, name, width, handlePassword }) {
   let classStyleOne =
     " border-solid rounded border-buttongray pl-[16px] pb-[4px] drop-shadow-md hover:border-[1px] hover:border-gray border-[1px] focus:drop-shadow-md focus:outline-blue-500 font-montserrat font-medium text-[14px] " +
     width;
@@ -175,8 +183,9 @@ function Password({ textname, name, width }) {
         {textname}
       </p>
       {errorState ? (
-        <p className="text-[11px] font-montserrat font-medium text-rose-500">
-          * Password cannot be less than five characters
+        <p className="text-[11px] w-[310px] font-montserrat font-medium text-softred">
+          Password cannot be less than five characters and must contain
+          alphanumeric characters Example: password2@
         </p>
       ) : (
         <></>
@@ -185,14 +194,20 @@ function Password({ textname, name, width }) {
         className={errorState ? classStyleTwo : classStyleOne}
         onChange={(e) => {
           let value = e.target.value;
-          if (value.length < 3) {
-            seterrorState(true);
-            console.log(errorState);
-          } else if (value.length >= 3) {
+          const keyword =
+            /^(?=.*[a-zA-Z])(?=.*\d)(?=.*[@$!%*?&])[a-zA-Z\d@$!%*?&]{8,}$/;
+          let passwordtest = keyword.test(value);
+          if (passwordtest) {
             seterrorState(false);
+          } else {
+            seterrorState(true);
           }
         }}
-        type="text"
+        onBlur={(e) => {
+          let userInput = e.target.value;
+          handlePassword(userInput);
+        }}
+        type="password"
         name={name}
         id=""
       />

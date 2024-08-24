@@ -3,6 +3,7 @@ import SignUpComponent from "../mini-components/signUpComponent";
 import inputRelatedTwo from "../mini-components/inputtwo";
 import { useSelector } from "react-redux";
 import MenuCard from "../mini-components/menu";
+import inputRelated from "../mini-components/input";
 
 function DetailsPage() {
     const menuState=useSelector(state=>state.MenuSwitch.menuState)
@@ -19,12 +20,16 @@ function DetailsPage() {
             <SignUpComponent />
             </div>
             <div className="mt-[20px] flex flex-row gap-x-[20px] gap-y-[40px] min-560:w-[800px] flex-wrap">
+            <inputRelated.EmailInput
+            textname={"Email"}
+            name={"email"}
+            width={"w-[270px] min-478:w-[190px] h-[34px] drop-shadow-none"}
+          />
             <inputRelatedTwo.Username textname={'Username'} name={'username'} width={'w-[270px] min-478:w-[190px] h-[34px]'} />
             <inputRelatedTwo.NameInput textname={'First name'} name={'firstname'} width={'w-[270px] min-478:w-[190px] h-[34px]'} />
             <inputRelatedTwo.Username textname={'Middle name'} name={'middlename'} width={'w-[270px] min-478:w-[190px] h-[34px]'} />
             <inputRelatedTwo.Username textname={'Last name'} name={'email'} width={'w-[270px] min-478:w-[190px] h-[34px]'} />
             <inputRelatedTwo.Username textname={'Mobile number'} name={'number'} width={'w-[270px] min-478:w-[190px] h-[34px]'} />
-            <inputRelatedTwo.Username textname={'Alternate mobile number'} name={'alternate'} width={'w-[270px] min-478:w-[190px] h-[34px]'} />
             <inputRelatedTwo.Date textname={'Date of Birth'} name={'DOB'} width={'w-[270px] min-478:w-[190px] h-[34px]'} />
             </div>
             </div>

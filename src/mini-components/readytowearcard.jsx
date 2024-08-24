@@ -4,25 +4,19 @@ import TwodigitLocaleStringGenerator from "../utilities/twodigitLocalestring";
 import { Link } from "react-router-dom";
 
 function ProductCard({products}) {
-     
+
   return products.map((product) => {
     return (
-      <a onClick={(e)=>{
-        e.stopPropagation();
-        e.preventDefault();
-        window.location.href = `/products/${product._id}`;
-      }}
-      className="cursor-pointer"
-      >
+      <Link to={`/products/${product.id}`} >
       <div key={product.id} className="flex flex-col items-start w-[140px] min-330:w-[150px] min-430:w-[165px] min-450:w-[192px] gap-[18px] min-550:w-[240px]">
-        <ProductImage productImage={product._id} />
+        <ProductImage productImage={product.id} />
         <ProductDiscription productName={product.productName} />
         <ProductPrice
           discount={product.discount}
           actualprice={product.actualprice}
         />
       </div>
-      </a>
+      </Link>
     );
   });
 }
@@ -107,12 +101,6 @@ function Discount({ discountpercentage }) {
   );
 }
 
-const ProductComponents={
-  ProductCard,
-  ProductImage,
-  ProductDiscription,
-  ProductPrice,
-  Discount
-}
+
 
 export default ProductComponents;

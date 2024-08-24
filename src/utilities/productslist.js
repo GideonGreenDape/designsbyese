@@ -64,15 +64,7 @@ const productlist = [
       discountPrice: "17700",
       discount: "20",
       actualprice: "101000",
-    }, { 
-      id:328,
-      productName:
-        "The Owambe Weekend Edit (Casual and comfortable weekend wear, inspired by Owambe social gatherings)",
-      productImage: "none",
-      discountPrice: "17700",
-      discount: "20",
-      actualprice: "101000",
-    },
+    }
   ];
 
   export default productlist;
